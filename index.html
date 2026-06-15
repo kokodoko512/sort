@@ -22,10 +22,6 @@
             cursor: pointer;
         }
 
-        #history {
-            margin-top: 30px;
-            font-size: 18px;
-        }
     </style>
 </head>
 <body>
@@ -37,10 +33,6 @@
     <button onclick="generateNumber()">生成</button>
     <button onclick="resetNumbers()">リセット</button>
 
-    <div id="history">
-        <strong>生成済み:</strong>
-        <span id="historyList"></span>
-    </div>
 
     <script>
         let numbers = [];
@@ -51,7 +43,6 @@
             history = [];
 
             document.getElementById("number").textContent = "-";
-            document.getElementById("historyList").textContent = "";
         }
 
         function generateNumber() {
@@ -67,8 +58,6 @@
             history.push(number);
 
             document.getElementById("number").textContent = number;
-            document.getElementById("historyList").textContent =
-                history.join(", ");
         }
 
         resetNumbers();
